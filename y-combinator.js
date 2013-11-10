@@ -7,3 +7,16 @@ function Y(le) {
         })
     }))
 }
+
+// test
+var sum = function (sum) {
+    return function(na) {
+        if (na.length == 0) 
+            return 0
+        else {
+            return na.shift() + sum(na)
+        }
+    }
+}
+
+((Y(sum)) ([1, 2, 4, 5]))
